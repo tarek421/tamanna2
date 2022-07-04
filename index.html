@@ -16,9 +16,40 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap.min.css">
     <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
     <!-- Swiper css -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .filterDiv {
+          float: left;
+          margin-top: 2px;
+          display: none;
+        }
+        
+        .show {
+          display: block;
+        }
+        
+        /* Style the buttons */
+        .btn {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: #f1f1f1;
+          cursor: pointer;
+        }
+        
+        .btn:hover {
+          background-color: #ddd;
+        }
+        
+        .btn.actives {
+          background-color: #666;
+          color: white;
+        }
+        </style>
+
 </head>
 
 <body>
@@ -40,10 +71,11 @@
                         <li class="nav-item"><a class="nav-link active fw-bolder " style="color: #6610f2"
                                 aria-current="page" href="#Home">Home</a></li>
                         <li class="nav-item"><a class="nav-link text-light   " aria-current="page"
-                                href="#Features">Destination</a></li>
+                                href="destination.html">Destination</a></li>
                         <li class="nav-item"><a class="nav-link text-light  " aria-current="page"
-                                href="#Princing">Package</a></li>
-                        <li class="nav-item"><a class="nav-link text-light " aria-current="page" href="#Blog">Blog</a>
+                                href="package.html">Package</a></li>
+                        <li class="nav-item"><a class="nav-link text-light " aria-current="page"
+                                href="#Blog">Gallery</a>
                         </li>
                         <li class="nav-item"><a class="nav-link text-light " aria-current="page" href="#Contact">About
                                 us</a></li>
@@ -87,7 +119,7 @@
     </section>
 
 
-    <section class="info bg-dark">
+    <section id="Home" class="info bg-dark">
         <img class="rounded" src="https://htmldesigntemplates.com/html/yatriiworld/images/destination/destination12.jpg"
             alt="">
         <div>
@@ -136,23 +168,177 @@
                     better people. Each time we travel, we see the world with new eyes.
                 </p>
                 <h2>-----</h2>
-                <div>
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-primary" for="btnradio1">Historical</label>
 
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio2">Weekend</label>
+                <div id="myBtnContainer">
 
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio3">Holidays</label>
-
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-outline-primary" for="btnradio3">Special tour</label>
+                    <button class="btn actives" onclick="filterSelection('historical')">Historical</button>
+                    <button class="btn" onclick="filterSelection('weekend')">Weekend</button>
+                    <button class="btn" onclick="filterSelection('holidays')">Holidays</button>
+                    <button class="btn" onclick="filterSelection('specialTour')">Special Tour</button>
                 </div>
+
             </div>
             <div class="row py-3">
 
-                <div class="col-md-6 col-sm-12 col-lg-4">
+
+                <!-- Historical -->
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv historical">
+                    <div class="card"">
+                        <img src=" https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                        class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">Nepal Historical Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv historical">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">Canada New Year Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>617 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv historical">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">America Christmas Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>728 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekend -->
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv weekend">
+                    <div class="card"">
+                        <img src=" https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                        class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">Nepal Weekend Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv weekend">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">Canada Weekend Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>617 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv weekend">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">America Weekend Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>728 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Holidays -->
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv holidays">
+                    <div class="card"">
+                        <img src=" https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                        class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">Nepal Holidays Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv holidays">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">Canada Holidays Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>617 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv holidays">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38 Reviews</p>
+                            <hr>
+                            <h5 class="card-title">America Holidays Tour</h5>
+                            <hr>
+                            <p class="card-text"><i class="fa-solid fa-eye"></i>728 Visiting Places<br> Some quick
+                                example
+                                text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Special Tour -->
+
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv specialTour">
                     <div class="card"">
                         <img src=" https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                         class="card-img-top" alt="...">
@@ -169,7 +355,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 col-lg-4">
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv specialTour">
                     <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                             class="card-img-top" alt="...">
@@ -185,7 +371,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 col-lg-4">
+                <div class="col-md-6 col-sm-12 col-lg-4 filterDiv specialTour">
                     <div class="card">
                         <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                             class="card-img-top" alt="...">
@@ -204,20 +390,20 @@
 
             </div>
         </div>
-
-
     </section>
 
     <section class="top_deal">
         <div>
-            <div class="py-5 container text-center">
-                <h2 class="fw-bolder text-light">Today's <span class="text-danger">Top Deal</span></h2>
-                <p class="px-5 text-light">Travel has helped us to understand the meaning of life and it has helped us
-                    become better people. Each time we travel, we see the world with new eyes.
-                </p>
-                <h2 class="dash text-light">-----</h2>
-    
-    
+            <div class="py-5 container">
+                <div class="text-center">
+                    <h2 class="fw-bolder text-light">Today's <span class="text-danger">Top Deal</span></h2>
+                    <p class="px-5 text-light">Travel has helped us to understand the meaning of life and it has helped
+                        us
+                        become better people. Each time we travel, we see the world with new eyes.
+                    </p>
+                    <h2 class="dash text-light">-----</h2>
+                </div>
+
                 <div class="swiper mySwiper my-5">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -225,92 +411,116 @@
                                 <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
-                                        Reviews</p>
+                                    <i class="fa-solid fa-location-dot text-muted home_s_card">Germany</i>
+
                                     <hr>
-                                    <h5 class="card-title">Nepal Special Tour</h5>
+                                    <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                     <hr>
                                     <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting
                                         Places<br> Some quick example text to build on the card title and
                                         make up the bulk of the card's content.</p>
-    
+                                    <hr>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
+                                        Reviews</p>
+                                    <hr>
+                                    <p>From <span class="text-danger">$250.00</span> 7 days 6 nights</p>
+
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="swiper-slide">
                             <div class="card">
                                 <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
-                                        Reviews</p>
+                                    <i class="fa-solid fa-location-dot text-muted home_s_card">Japan</i>
+
                                     <hr>
-                                    <h5 class="card-title">Nepal Special Tour</h5>
+                                    <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                     <hr>
                                     <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting
                                         Places<br> Some quick example text to build on the card title and
                                         make up the bulk of the card's content.</p>
-    
+                                    <hr>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
+                                        Reviews</p>
+                                    <hr>
+                                    <p>From <span class="text-danger">$250.00</span> 5 days 4 nights</p>
+
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="swiper-slide">
                             <div class="card">
                                 <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
-                                        Reviews</p>
+                                    <i class="fa-solid fa-location-dot text-muted home_s_card">Thailand</i>
+
                                     <hr>
-                                    <h5 class="card-title">Nepal Special Tour</h5>
+                                    <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                     <hr>
                                     <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting
                                         Places<br> Some quick example text to build on the card title and
                                         make up the bulk of the card's content.</p>
-    
+                                    <hr>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
+                                        Reviews</p>
+                                    <hr>
+                                    <p>From <span class="text-danger">$215.00</span> 4 days 5 nights</p>
+
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="swiper-slide">
                             <div class="card">
                                 <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
-                                        Reviews</p>
+                                    <i class="fa-solid fa-location-dot text-muted home_s_card">Mexico</i>
+
                                     <hr>
-                                    <h5 class="card-title">Nepal Special Tour</h5>
+                                    <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                     <hr>
                                     <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting
                                         Places<br> Some quick example text to build on the card title and
                                         make up the bulk of the card's content.</p>
-    
+                                    <hr>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
+                                        Reviews</p>
+                                    <hr>
+                                    <p>From <span class="text-danger">$250.00</span> 7 days 6 nights</p>
+
                                 </div>
                             </div>
                         </div>
-    
+
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="https://cdn.pixabay.com/photo/2018/03/28/01/04/water-3267961__340.jpg"
+                                <img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=600"
                                     class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
-                                        Reviews</p>
+                                    <i class="fa-solid fa-location-dot text-muted home_s_card"> Indonesia</i>
                                     <hr>
-                                    <h5 class="card-title">Nepal Special Tour</h5>
+                                    <h5 class="card-title">Lorem, ipsum dolor.</h5>
                                     <hr>
                                     <p class="card-text"><i class="fa-solid fa-eye"></i>852 Visiting
                                         Places<br> Some quick example text to build on the card title and
                                         make up the bulk of the card's content.</p>
-    
+                                    <hr>
+                                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> 38
+                                        Reviews</p>
+                                    <hr>
+                                    <p>From <span class="text-danger">$215.00</span> 4 days 5 nights</p>
+
                                 </div>
                             </div>
                         </div>
@@ -318,8 +528,8 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
-    
-    
+
+
             </div>
         </div>
     </section>
@@ -388,9 +598,11 @@
 
     </section>
 
+
+
     <script src="bootstrap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="home.js"></script>
 
 </body>
 
