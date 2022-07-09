@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#dashboard .active {
+  color: red !important;
+}
+
+#dashboard nav {
+  background: rgba(1, 0, 10, 0.5);
+}
+
+#dashboard .sidebar {
+  background: #090213;
+  width: 20%;
+  height: 100vh;
+}
+
+#dashboard .sidebar li {
+  list-style: none;
+  margin: 10px 5px;
+}
+
+#dashboard .sidebar li a {
+  color: white;
+  text-decoration: none;
+}
+
+#dashboard .content {
+  width: 80%;
+  height: 100%;
+  background: #d4c5c5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/*# sourceMappingURL=Dashboard.css.map */
