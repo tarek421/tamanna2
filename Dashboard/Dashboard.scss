@@ -7,14 +7,20 @@ body {
     .active{
         color: red !important;
     }
-    nav{
-        background: hsla(248, 100%, 2%, 0.5);
-      }
-    // position: relative;
   .sidebar {
     background: rgb(9, 2, 19);
     width: 20%;
     height: 100vh;
+    position: fixed;
+    .brand{
+      margin: auto;
+      text-align: center;
+      color: #6610f2;
+      font-size: 40px;
+      text-decoration: none;
+      font-family: serif;
+      display: block;
+    }
     li{
         list-style: none;
         margin: 10px 5px;
@@ -33,3 +39,49 @@ body {
     top: 0;
   }
 }
+
+//Add Destination
+
+#addDestination {
+  h6 {
+    background: rebeccapurple;
+    color: white;
+    padding: 20px;
+    // margin-top: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: serif;
+  }
+  .product-content {
+    background-color: #fff;
+    padding: 30px 10px;
+  }
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 3px;
+  }
+  select {
+    padding: 12.5px;
+  }
+  textarea {
+    width: 97.3%;
+    margin: 13px;
+  }
+  .image-upload {
+    text-align: center;
+    border: 1px dashed #9e7f7f;
+    padding: 56px 5px;
+    margin-top: 13px;
+    img {
+      cursor: pointer;
+      width: auto;
+      height: 50px;
+    }
+    input {
+      display: none;
+    }
+  }
+}
+

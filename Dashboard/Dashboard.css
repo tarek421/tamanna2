@@ -7,14 +7,21 @@ body {
   color: red !important;
 }
 
-#dashboard nav {
-  background: rgba(1, 0, 10, 0.5);
-}
-
 #dashboard .sidebar {
   background: #090213;
   width: 20%;
   height: 100vh;
+  position: fixed;
+}
+
+#dashboard .sidebar .brand {
+  margin: auto;
+  text-align: center;
+  color: #6610f2;
+  font-size: 40px;
+  text-decoration: none;
+  font-family: serif;
+  display: block;
 }
 
 #dashboard .sidebar li {
@@ -34,5 +41,52 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+#addDestination h6 {
+  background: rebeccapurple;
+  color: white;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: serif;
+}
+
+#addDestination .product-content {
+  background-color: #fff;
+  padding: 30px 10px;
+}
+
+#addDestination input,
+#addDestination select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 3px;
+}
+
+#addDestination select {
+  padding: 12.5px;
+}
+
+#addDestination textarea {
+  width: 97.3%;
+  margin: 13px;
+}
+
+#addDestination .image-upload {
+  text-align: center;
+  border: 1px dashed #9e7f7f;
+  padding: 56px 5px;
+  margin-top: 13px;
+}
+
+#addDestination .image-upload img {
+  cursor: pointer;
+  width: auto;
+  height: 50px;
+}
+
+#addDestination .image-upload input {
+  display: none;
 }
 /*# sourceMappingURL=Dashboard.css.map */
