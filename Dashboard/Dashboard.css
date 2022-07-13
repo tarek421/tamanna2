@@ -3,8 +3,13 @@ body {
   padding: 0;
 }
 
+#dashboard ul {
+  padding: 2rem;
+}
+
 #dashboard .active {
   color: red !important;
+  background-color: blue;
 }
 
 #dashboard .sidebar {
@@ -27,6 +32,7 @@ body {
 #dashboard .sidebar li {
   list-style: none;
   margin: 10px 5px;
+  padding: 5px;
 }
 
 #dashboard .sidebar li a {
@@ -43,7 +49,7 @@ body {
   top: 0;
 }
 
-#addDestination h6 {
+#addDestination .title {
   background: rebeccapurple;
   color: white;
   padding: 20px;
@@ -88,5 +94,32 @@ body {
 
 #addDestination .image-upload input {
   display: none;
+}
+
+#user-list .title {
+  background: rebeccapurple;
+  color: white;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: serif;
+}
+
+#destination-control .title {
+  background: rebeccapurple;
+  color: white;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: serif;
+}
+
+#add-reviews .title {
+  background: rebeccapurple;
+  color: white;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: serif;
 }
 /*# sourceMappingURL=Dashboard.css.map */
